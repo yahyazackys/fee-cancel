@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Link from "next/link";
 
 const RegisterPage = () => {
   const [name, setName] = useState("");
@@ -36,7 +37,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="p-4 flex w-full h-screen items-center justify-center bg-slate-50">
+    <div className="p-4 flex flex-col w-full h-screen items-center justify-center bg-slate-50">
       <div className="w-1/2 flex flex-col gap-y-4">
         <h2 className="text-3xl font-semibold text-center">Register</h2>
         <Input
@@ -73,6 +74,12 @@ const RegisterPage = () => {
           Register
         </Button>
       </div>
+      <p className="mt-4 text-center">
+        Sudah punya akun?
+        <Link href="/login" className="text-blue-600 hover:underline ml-2">
+          Masuk di sini
+        </Link>
+      </p>
     </div>
   );
 };
