@@ -66,7 +66,7 @@ const LoginPage = () => {
         </Button>
       </div>
       <p className="mt-4 text-center">
-        Belum punya akun?{" "}
+        Belum punya akun?
         <Link href="/register" className="text-blue-600 hover:underline">
           Daftar di sini
         </Link>
