@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useAuth } from "../auth_context";
+import Link from "next/link"; // Import Link from next/link
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -37,7 +38,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="p-4 flex w-full h-screen items-center justify-center bg-slate-50">
+    <div className="p-4 flex flex-col w-full h-screen items-center justify-center bg-slate-50">
       <div className="w-1/2 flex flex-col gap-y-4">
         <h2 className="text-3xl font-semibold text-center">
           Enter Your Account
@@ -64,6 +65,12 @@ const LoginPage = () => {
           Login
         </Button>
       </div>
+      <p className="mt-4 text-center">
+        Belum punya akun?{" "}
+        <Link href="/register" className="text-blue-600 hover:underline">
+          Daftar di sini
+        </Link>
+      </p>
     </div>
   );
 };
